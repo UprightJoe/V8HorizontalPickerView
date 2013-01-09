@@ -73,33 +73,44 @@
 #pragma mark - Init/Dealloc
 - (id)initWithFrame:(CGRect)frame {
 	if ((self = [super initWithFrame:frame])) {
-		elementWidths = [[NSMutableArray array] retain];
-
-		[self addScrollView];
-
-		self.textColor   = [UIColor blackColor];
-		self.elementFont = [UIFont systemFontOfSize:12.0f];
-
-		currentSelectedIndex = -1; // nothing is selected yet
-
-		numberOfElements     = 0;
-		elementPadding       = 0;
-		dataHasBeenLoaded    = NO;
-		scrollSizeHasBeenSet = NO;
-		scrollingBasedOnUserInteraction = NO;
-
-		// default to the center
-		selectionPoint = CGPointMake(frame.size.width / 2, 0.0f);
-		indicatorPosition = V8HorizontalPickerIndicatorBottom;
-
-		firstVisibleElement = -1;
-		lastVisibleElement  = -1;
-
-		scrollEdgeViewPadding = 0.0f;
-
-		self.autoresizesSubviews = YES;
+        [self setup];
 	}
 	return self;
+}
+
+- (void) awakeFromNib
+{
+    [super awakeFromNib];
+    [self setup];
+}
+
+- (void) setup
+{
+    elementWidths = [[NSMutableArray array] retain];
+
+    [self addScrollView];
+
+    self.textColor   = [UIColor blackColor];
+    self.elementFont = [UIFont systemFontOfSize:12.0f];
+
+    currentSelectedIndex = -1; // nothing is selected yet
+
+    numberOfElements     = 0;
+    elementPadding       = 0;
+    dataHasBeenLoaded    = NO;
+    scrollSizeHasBeenSet = NO;
+    scrollingBasedOnUserInteraction = NO;
+
+    // default to the center
+    selectionPoint = CGPointMake(self.frame.size.width / 2, 0.0f);
+    indicatorPosition = V8HorizontalPickerIndicatorBottom;
+
+    firstVisibleElement = -1;
+    lastVisibleElement  = -1;
+
+    scrollEdgeViewPadding = 0.0f;
+    
+    self.autoresizesSubviews = YES;
 }
 
 - (void)dealloc {

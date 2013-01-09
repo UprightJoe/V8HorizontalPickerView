@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "V8HorizontalPickerView"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary      = "Horizontal UIPickerView Control for iOS."
   s.description  = <<-DESC
 	A control for iOS apps which allows a user to select from multiple options by swiping 
@@ -12,9 +12,9 @@ Pod::Spec.new do |s|
 
   s.license      = { :type => 'zlib/libpng', :file => 'LICENSE' }
 
-  s.author       = { "Shawn Veader" => "shawn@veader.org" }
+  s.authors       = { "Shawn Veader" => "shawn@veader.org", "Travis Hanna" => "travis.hanna@gmail.com" }
 
-  s.source       = { :git => "https://github.com/veader/V8HorizontalPickerView.git", :commit => '2d745e7737'}
+  s.source       = { :git => "https://github.com/UprightJoe/V8HorizontalPickerView.git", :tag => '0.0.2'}
   s.platform     = :ios
 
   s.source_files = 'Classes', '*.{h,m}'

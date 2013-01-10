@@ -1,3 +1,10 @@
+FORK INFORMATION
+================
+This fork was created by Travis Hanna (GitHub:UprightJoe).  To date, the following modifications have been made:
+
+- CocoaPods support was added via a podspec file (http://cocoapods.org)
+- An awakeFromNib method was added to improve storyboard support
+
 V8HorizontalPickerView
 ======================
 by Shawn Veader (@veader) of [V8 Logic](http://v8logic.com) / [V8 Labs, LLC](http://v8labs.com)

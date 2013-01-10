@@ -252,6 +252,7 @@
 				GCC_PREFIX_HEADER = HorzPickerTestApp_Prefix.pch;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "HorzPickerTestApp-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = HorzPickerTestApp;
 			};
 			name = Debug;
@@ -265,6 +266,7 @@
 				GCC_PREFIX_HEADER = HorzPickerTestApp_Prefix.pch;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "HorzPickerTestApp-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = HorzPickerTestApp;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -296,6 +298,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = "V8TESTINGUI=1";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "HorzPickerTestApp-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = HorzPickerTestApp;
 			};
 			name = Testing;

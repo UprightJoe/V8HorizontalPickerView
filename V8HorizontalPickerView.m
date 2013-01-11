@@ -194,10 +194,10 @@
 		if (!view) {
 			if (i < numberOfElements) { // make sure we are not requesting data out of range
 				if (self.delegate && [self.delegate respondsToSelector:titleForElementSelector]) {
-					NSString *title = [self.delegate horizontalPickerView:self titleForElementAtIndex:i];
+					NSString *title = [self.dataSource horizontalPickerView:self titleForElementAtIndex:i];
 					view = [self labelForForElementAtIndex:i withTitle:title];
 				} else if (self.delegate && [self.delegate respondsToSelector:viewForElementSelector]) {
-					view = [self.delegate horizontalPickerView:self viewForElementAtIndex:i];
+					view = [self.dataSource horizontalPickerView:self viewForElementAtIndex:i];
 					// move view's center to the center of item's ideal frame
 					tmpViewFrame = [self frameForElementAtIndex:i];
 					itemViewCenter = CGPointMake((tmpViewFrame.size.width / 2.0f) + tmpViewFrame.origin.x, (tmpViewFrame.size.height / 2.0f));

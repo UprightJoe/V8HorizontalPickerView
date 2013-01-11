@@ -10,9 +10,16 @@
 // ------------------------------------------------------------------
 // V8HorizontalPickerView DataSource Protocol
 @protocol V8HorizontalPickerViewDataSource <NSObject>
+@optional
+// one of these two methods must be defined
+- (NSString *)horizontalPickerView:(V8HorizontalPickerView *)picker titleForElementAtIndex:(NSInteger)index;
+- (UIView *)horizontalPickerView:(V8HorizontalPickerView *)picker viewForElementAtIndex:(NSInteger)index;
+// any view returned from this must confirm to the V8HorizontalPickerElementState protocol
+
 @required
 // data source is responsible for reporting how many elements there are
 - (NSInteger)numberOfElementsInHorizontalPickerView:(V8HorizontalPickerView *)picker;
+
 @end
 
 
@@ -23,11 +30,6 @@
 @optional
 // delegate callback to notify delegate selected element has changed
 - (void)horizontalPickerView:(V8HorizontalPickerView *)picker didSelectElementAtIndex:(NSInteger)index;
-
-// one of these two methods must be defined
-- (NSString *)horizontalPickerView:(V8HorizontalPickerView *)picker titleForElementAtIndex:(NSInteger)index;
-- (UIView *)horizontalPickerView:(V8HorizontalPickerView *)picker viewForElementAtIndex:(NSInteger)index;
-// any view returned from this must confirm to the V8HorizontalPickerElementState protocol
 
 @required
 // delegate is responsible for reporting the size of each element
